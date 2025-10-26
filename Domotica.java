@@ -391,11 +391,178 @@ public class Domotica {
     }
 
     public static void Speakers(){
+    boolean Speakersdiningroom = false , Speakerskitchen = false, Speakersbathroom = false, Speakersroom1 = false, Speakersroom2 = false, Speakersroom3 = false;
+    String opcio4;
+    String SpeakersControl;
+    do {
+            System.out.println("-------------------------------------");
+            System.out.println("You have chosen the Speakers control");
+            System.out.println("-------------------------------------");
+            System.out.println("Please, chose the room you would like to control the Speakers on: ");
+            System.out.println("-------------------------------------");
+            ChoseRoom();
+    
+            opcio4 = scanner.nextLine();
+            
+            switch (opcio4) {
+                case "1":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the dining room: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the dining room: " + (Speakersdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type: open");
+                System.out.println("If you want to close the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the dining room");
+                    Speakersdiningroom = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the dining room");
+                    Speakersdiningroom = false;
+                }
+                break;
+                case "2":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Kitchen: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the Kitchen: " + (Speakerskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type: open");
+                System.out.println("If you want to close the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the Kitchen");
+                    Speakerskitchen = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the Kitchen");
+                    Speakerskitchen = false;
+                }
+                break;
+                case "3":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Bathroom: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the Bathroom: " + (Speakersbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type: open");
+                System.out.println("If you want to close the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the Bathroom");
+                    Speakersbathroom = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the Bathroom");
+                    Speakersbathroom = false;
+                }
+                break;
+                case "4":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 1: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the Room 1: " + (Speakersroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type: open");
+                System.out.println("If you want to close the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the Room 1");
+                    Speakersroom1 = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the Room 1");
+                    Speakersroom1 = false;
+                }
+                break;
+                case "5":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 2: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the Room 2: " + (Speakersroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type: open");
+                System.out.println("If you want to close the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the Room 2");
+                    Speakersroom2 = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the Room 2");
+                    Speakersroom2 = false;
+                }
+                break;
+                case "6":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 3: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Speakers in the Room 3: " + (Speakersroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Speakers type open");
+                System.out.println("If you want to close the Speakers type close");
+                SpeakersControl = scanner.nextLine();
+    
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers on the Room 3");
+                    Speakersroom3 = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers on the Room 3");
+                    Speakersroom3 = false;
+                }
+                break;
+                case "7":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control all the rooms simultaneously: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of all the Speakers in the house: " + (Speakersdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Speakerskitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Speakersbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Speakersroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Speakersroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Speakersroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open all the Speakers type: open");
+                System.out.println("If you want to close all the Speakers type: close");
+                SpeakersControl = scanner.nextLine();
 
+                if (SpeakersControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Speakers in the House");
+                    Speakersdiningroom = true;
+                    Speakerskitchen = true;
+                    Speakersbathroom = true;
+                    Speakersroom1 = true;
+                    Speakersroom2 = true;
+                    Speakersroom3 = true;
+                }
+                else if (SpeakersControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Speakers in the House");
+                    Speakersdiningroom = false;
+                    Speakerskitchen = false;
+                    Speakersbathroom = false;
+                    Speakersroom1 = false;
+                    Speakersroom2 = false;
+                    Speakersroom3 = false;
+                }
+                break;
+                case "8":
+                Returnmenu();
+                break;
+                default:{
+                System.out.println("Invalid Option");
+                }
+                break;
+                
+            }
+            
+        } while (!opcio4.equalsIgnoreCase("8"));
     }
 
     public static void Curtains(){
-
+    
     }
     public static void ChoseRoom(){
         System.out.println("-------------------------------------");
