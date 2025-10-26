@@ -86,7 +86,7 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Kitchen: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Kitchen: " + (blindskitchen ? "OPEN" : "CLOSED"));
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -105,7 +105,7 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Bathroom: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindsbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Bathroom: " + (blindsbathroom ? "OPEN" : "CLOSED"));
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -124,7 +124,7 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 1: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindsroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 1: " + (blindsroom1 ? "OPEN" : "CLOSED"));
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -143,7 +143,7 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 2: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindsroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 2: " + (blindsroom2 ? "OPEN" : "CLOSED"));
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -162,7 +162,7 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 3: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindsroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 3: " + (blindsroom3 ? "OPEN" : "CLOSED"));
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type open");
                 System.out.println("If you want to close the blinds type close");
@@ -188,7 +188,7 @@ public class Domotica {
                 blindsControl = scanner.nextLine();
 
                 if (blindsControl.equalsIgnoreCase("OPEN".trim())){
-                    System.out.println("You have successfully opened the blinds on the Room 3");
+                    System.out.println("You have successfully opened the blinds in the house");
                     blindsdiningroom = true;
                     blindskitchen = true;
                     blindsbathroom = true;
@@ -197,7 +197,7 @@ public class Domotica {
                     blindsroom3 = true;
                 }
                 else if (blindsControl.equalsIgnoreCase("CLOSE".trim())){
-                    System.out.println("You have successfully closed the blinds on the Room 3");
+                    System.out.println("You have successfully closed the blinds in the house");
                     blindsdiningroom = false;
                     blindskitchen = false;
                     blindsbathroom = false;
@@ -223,6 +223,171 @@ public class Domotica {
     boolean Airdiningroom = false , Airkitchen = false, Airbathroom = false, Airroom1 = false, Airroom2 = false, Airroom3 = false;
     String opcio3;
     String AirControl;
+    do {
+            System.out.println("-------------------------------------");
+            System.out.println("You have chosen the Air Conditioner control");
+            System.out.println("-------------------------------------");
+            System.out.println("Please, chose the room you would like to control the Air Conditioner on: ");
+            System.out.println("-------------------------------------");
+            ChoseRoom();
+    
+            opcio3 = scanner.nextLine();
+            
+            switch (opcio3) {
+                case "1":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the dining room: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the dining room: " + (Airdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type: open");
+                System.out.println("If you want to close the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the dining room");
+                    Airdiningroom = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the dining room");
+                    Airdiningroom = false;
+                }
+                break;
+                case "2":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Kitchen: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the Kitchen: " + (Airkitchen ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type: open");
+                System.out.println("If you want to close the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the Kitchen");
+                    blindskitchen = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the Kitchen");
+                    Airkitchen = false;
+                }
+                break;
+                case "3":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Bathroom: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the Bathroom: " + (Airbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type: open");
+                System.out.println("If you want to close the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the Bathroom");
+                    Airbathroom = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the Bathroom");
+                    Airbathroom = false;
+                }
+                break;
+                case "4":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 1: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the Room 1: " + (Airroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type: open");
+                System.out.println("If you want to close the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the Room 1");
+                    Airroom1 = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the Room 1");
+                    Airroom1 = false;
+                }
+                break;
+                case "5":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 2: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the Room 2: " + (Airroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type: open");
+                System.out.println("If you want to close the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the Room 2");
+                    Airroom2 = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the Room 2");
+                    Airroom2 = false;
+                }
+                break;
+                case "6":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 3: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Air Conditioner in the Room 3: " + (Airroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Air Conditioner type open");
+                System.out.println("If you want to close the Air Conditioner type close");
+                AirControl = scanner.nextLine();
+    
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner on the Room 3");
+                    Airroom3 = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner on the Room 3");
+                    Airroom3 = false;
+                }
+                break;
+                case "7":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control all the rooms simultaneously: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of all the Air Conditioner in the house: " + (Airdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Airkitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Airbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Airroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Airroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Airroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open all the Air Conditioner type: open");
+                System.out.println("If you want to close all the Air Conditioner type: close");
+                AirControl = scanner.nextLine();
+
+                if (AirControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Air Conditioner in the House");
+                    Airdiningroom = true;
+                    Airkitchen = true;
+                    Airbathroom = true;
+                    Airroom1 = true;
+                    Airroom2 = true;
+                    Airroom3 = true;
+                }
+                else if (AirControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Air Conditioner in the House");
+                    Airdiningroom = false;
+                    Airkitchen = false;
+                    Airbathroom = false;
+                    Airroom1 = false;
+                    Airroom2 = false;
+                    Airroom3 = false;
+                }
+                break;
+                case "8":
+                Returnmenu();
+                break;
+                default:{
+                System.out.println("Invalid Option");
+                }
+                break;
+                
+            }
+            
+        } while (!opcio3.equalsIgnoreCase("8"));
     }
 
     public static void Speakers(){
