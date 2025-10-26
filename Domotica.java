@@ -562,7 +562,174 @@ public class Domotica {
     }
 
     public static void Curtains(){
+    boolean Curtainsdiningroom = false , Curtainskitchen = false, Curtainsbathroom = false, Curtainsroom1 = false, Curtainsroom2 = false, Curtainsroom3 = false;
+    String opcio5;
+    String CurtainsControl;
+    do {
+            System.out.println("-------------------------------------");
+            System.out.println("You have chosen the Curtains control");
+            System.out.println("-------------------------------------");
+            System.out.println("Please, chose the room you would like to control the Curtains on: ");
+            System.out.println("-------------------------------------");
+            ChoseRoom();
     
+            opcio5 = scanner.nextLine();
+            
+            switch (opcio5) {
+                case "1":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the dining room: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the dining room: " + (Curtainsdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type: open");
+                System.out.println("If you want to close the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the dining room");
+                    Curtainsdiningroom = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the dining room");
+                    Curtainsdiningroom = false;
+                }
+                break;
+                case "2":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Kitchen: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the Kitchen: " + (Curtainskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type: open");
+                System.out.println("If you want to close the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the Kitchen");
+                    Curtainskitchen = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the Kitchen");
+                    Curtainskitchen = false;
+                }
+                break;
+                case "3":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Bathroom: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the Bathroom: " + (Curtainsbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type: open");
+                System.out.println("If you want to close the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the Bathroom");
+                    Curtainsbathroom = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the Bathroom");
+                    Curtainsbathroom = false;
+                }
+                break;
+                case "4":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 1: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the Room 1: " + (Curtainsroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type: open");
+                System.out.println("If you want to close the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the Room 1");
+                    Curtainsroom1 = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the Room 1");
+                    Curtainsroom1 = false;
+                }
+                break;
+                case "5":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 2: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the Room 2: " + (Curtainsroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type: open");
+                System.out.println("If you want to close the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the Room 2");
+                    Curtainsroom2 = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the Room 2");
+                    Curtainsroom2 = false;
+                }
+                break;
+                case "6":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control the Room 3: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of your Curtains in the Room 3: " + (Curtainsroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open the Curtains type open");
+                System.out.println("If you want to close the Curtains type close");
+                CurtainsControl = scanner.nextLine();
+    
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains on the Room 3");
+                    Curtainsroom3 = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains on the Room 3");
+                    Curtainsroom3 = false;
+                }
+                break;
+                case "7":
+                System.out.println("--------------------------------------------------------");
+                System.out.println("You have chosen to control all the rooms simultaneously: ");
+                System.out.println("--------------------------------------------------------");
+                System.out.println("This is the state of all the Curtains in the house: " + (Curtainsdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Curtainskitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Curtainsbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Curtainsroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Curtainsroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Curtainsroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("--------------------------------------------------------");
+                System.out.println("If you want to open all the Curtains type: open");
+                System.out.println("If you want to close all the Curtains type: close");
+                CurtainsControl = scanner.nextLine();
+
+                if (CurtainsControl.equalsIgnoreCase("OPEN".trim())){
+                    System.out.println("You have successfully opened the Curtains in the House");
+                    Curtainsdiningroom = true;
+                    Curtainskitchen = true;
+                    Curtainsbathroom = true;
+                    Curtainsroom1 = true;
+                    Curtainsroom2 = true;
+                    Curtainsroom3 = true;
+                }
+                else if (CurtainsControl.equalsIgnoreCase("CLOSE".trim())){
+                    System.out.println("You have successfully closed the Curtains in the House");
+                    Curtainsdiningroom = false;
+                    Curtainskitchen = false;
+                    Curtainsbathroom = false;
+                    Curtainsroom1 = false;
+                    Curtainsroom2 = false;
+                    Curtainsroom3 = false;
+                }
+                break;
+                case "8":
+                Returnmenu();
+                break;
+                default:{
+                System.out.println("Invalid Option");
+                }
+                break;
+                
+            }
+            
+        } while (!opcio5.equalsIgnoreCase("8"));
     }
     public static void ChoseRoom(){
         System.out.println("-------------------------------------");
