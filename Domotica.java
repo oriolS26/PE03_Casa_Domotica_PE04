@@ -1,12 +1,18 @@
 import java.util.Scanner;
 
 public class Domotica {
-    static boolean blinds;
-    static String blindsControl;
-    static Scanner scanner = new Scanner(System.in);
-    static boolean blindsdiningroom = false , blindskitchen = false, blindsbathroom = false, blindsroom1 = false, blindsroom2 = false, blindsroom3 = false;
-    static String opcio2;
-        public static void main(String[] args) {
+     boolean blinds;
+     String blindsControl;
+     Scanner scanner = new Scanner(System.in);
+     boolean blindsdiningroom = false , blindskitchen = false, blindsbathroom = false, blindsroom1 = false, blindsroom2 = false, blindsroom3 = false;
+     String opcio2;
+        public void main(String[] args) {
+            Domotica p = new Domotica();
+            p.principal();
+        }
+        public void principal(){
+            int varPrincipal = 0;
+        
         String opcio1;
         do {
         System.out.println("-----------------------------------");
@@ -17,7 +23,8 @@ public class Domotica {
         System.out.println("2: Air Conditioner");
         System.out.println("3: Speakers");
         System.out.println("4: Curtains");
-        System.out.println("5: Exit");
+        System.out.println("5: Automatic Mode");
+        System.out.println("6: Exit");
         System.out.println("-----------------------------------");
         System.out.println("Please put your choice below: ");
 
@@ -37,6 +44,9 @@ public class Domotica {
                 Curtains();
                 break;
             case "5":
+                AutomaticMode();
+                break;
+            case "6":
                 System.out.println("--------------------------");
                 System.out.println("You have chosen to exit");
                 System.out.println("--------------------------");
@@ -48,10 +58,10 @@ public class Domotica {
                 break;
         
             }
-        } while (!opcio1.equalsIgnoreCase("5"));
+        } while (!opcio1.equalsIgnoreCase("6"));
     }
 
-        public static void blinds(){
+        public  void blinds(){
             do {
             System.out.println("-------------------------------------");
             System.out.println("You have chosen the blinds control");
@@ -219,7 +229,7 @@ public class Domotica {
         } while (!opcio2.equalsIgnoreCase("8"));
     }
 
-    public static void Air(){
+    public  void Air(){
     boolean Airdiningroom = false , Airkitchen = false, Airbathroom = false, Airroom1 = false, Airroom2 = false, Airroom3 = false;
     String opcio3;
     String AirControl;
@@ -390,7 +400,7 @@ public class Domotica {
         } while (!opcio3.equalsIgnoreCase("8"));
     }
 
-    public static void Speakers(){
+    public  void Speakers(){
     boolean Speakersdiningroom = false , Speakerskitchen = false, Speakersbathroom = false, Speakersroom1 = false, Speakersroom2 = false, Speakersroom3 = false;
     String opcio4;
     String SpeakersControl;
@@ -561,7 +571,7 @@ public class Domotica {
         } while (!opcio4.equalsIgnoreCase("8"));
     }
 
-    public static void Curtains(){
+    public  void Curtains(){
     boolean Curtainsdiningroom = false , Curtainskitchen = false, Curtainsbathroom = false, Curtainsroom1 = false, Curtainsroom2 = false, Curtainsroom3 = false;
     String opcio5;
     String CurtainsControl;
@@ -731,7 +741,10 @@ public class Domotica {
             
         } while (!opcio5.equalsIgnoreCase("8"));
     }
-    public static void ChoseRoom(){
+    public  void AutomaticMode(){
+    
+    }
+    public  void ChoseRoom(){
         System.out.println("-------------------------------------");
         System.out.println("Chose 1 for dining room");
         System.out.println("Chose 2 for kitchen");
@@ -743,7 +756,7 @@ public class Domotica {
         System.out.println("Chose 8 to exit to Main Menu");
         System.out.println("-------------------------------------");
     }
-    public static void Returnmenu() {
+    public  void Returnmenu() {
         System.out.println("------------------------------------");
                 System.out.println("Returning to Main menu...");
                 System.out.println("------------------------------------");
