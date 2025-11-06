@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalTime;
 
 public class Domotica {
      boolean blinds;
@@ -77,7 +78,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the dining room: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the dining room: " + (blindsdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the dining room: ");
+                if (blindsdiningroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -96,7 +105,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Kitchen: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the Kitchen: " + (blindskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Kitchen: ");
+                if (blindskitchen == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -115,7 +132,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Bathroom: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the Bathroom: " + (blindsbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Bathroom: ");
+                if (blindsbathroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -134,7 +159,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 1: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the Room 1: " + (blindsroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 1: ");
+                if (blindsroom1 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -153,7 +186,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 2: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the Room 2: " + (blindsroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 2: ");
+                if (blindsroom2 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type: open");
                 System.out.println("If you want to close the blinds type: close");
@@ -172,7 +213,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 3: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your blinds in the Room 3: " + (blindsroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your blinds in the Room 3: ");
+                if (blindsroom3 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open the blinds type open");
                 System.out.println("If you want to close the blinds type close");
@@ -191,7 +240,55 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control all the rooms simultaneously: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of all the blinds in the house: " + (blindsdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (blindskitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (blindsbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (blindsroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (blindsroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (blindsroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("This is the state of all the blinds in the house: ");
+                if (blindsdiningroom == true)
+                {
+                    System.out.print(" Dining room: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Dining room: CLOSED ");
+                }
+                if (blindskitchen == true)
+                {
+                    System.out.print(" Kitchen: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Kitchen: CLOSED ");
+                }
+                if (blindsbathroom == true)
+                {
+                    System.out.print(" Bathroom: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Bathroom: CLOSED ");
+                }
+                if (blindsroom1 == true)
+                {
+                    System.out.print(" Room 1: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 1: CLOSED ");
+                }
+                if (blindsroom2 == true)
+                {
+                    System.out.print(" Room 2: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 2: CLOSED ");
+                }
+                if (blindsroom3 == true)
+                {
+                    System.out.print(" Room 3: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 3: CLOSED ");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to fully open all the blinds type: open");
                 System.out.println("If you want to close all the blinds type: close");
@@ -248,7 +345,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the dining room: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the dining room: " + (Airdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the dining room: ");
+                if (Airdiningroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type: open");
                 System.out.println("If you want to close the Air Conditioner type: close");
@@ -267,7 +372,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Kitchen: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the Kitchen: " + (Airkitchen ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the Kitchen: ");
+                if (Airkitchen == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type: open");
                 System.out.println("If you want to close the Air Conditioner type: close");
@@ -286,7 +399,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Bathroom: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the Bathroom: " + (Airbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the Bathroom: ");
+                if (Airbathroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type: open");
                 System.out.println("If you want to close the Air Conditioner type: close");
@@ -305,7 +426,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 1: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the Room 1: " + (Airroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the Room 1: ");
+                if (Airroom1 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type: open");
                 System.out.println("If you want to close the Air Conditioner type: close");
@@ -324,7 +453,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 2: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the Room 2: " + (Airroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the Room 2: ");
+                if (Airroom2 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type: open");
                 System.out.println("If you want to close the Air Conditioner type: close");
@@ -343,7 +480,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 3: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Air Conditioner in the Room 3: " + (Airroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Air Conditioner in the Room 3: ");
+                if (Airroom3 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Air Conditioner type open");
                 System.out.println("If you want to close the Air Conditioner type close");
@@ -362,7 +507,55 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control all the rooms simultaneously: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of all the Air Conditioner in the house: " + (Airdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Airkitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Airbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Airroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Airroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Airroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("This is the state of all the Air Conditioner in the house: ");
+                if (Airdiningroom == true)
+                {
+                    System.out.print(" Dining room: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Dining room: CLOSED ");
+                }
+                if (Airkitchen == true)
+                {
+                    System.out.print(" Kitchen: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Kitchen: CLOSED ");
+                }
+                if (Airbathroom == true)
+                {
+                    System.out.print(" Bathroom: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Bathroom: CLOSED ");
+                }
+                if (Airroom1 == true)
+                {
+                    System.out.print(" Room 1: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 1: CLOSED ");
+                }
+                if (Airroom2 == true)
+                {
+                    System.out.print(" Room 2: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 2: CLOSED ");
+                }
+                if (Airroom3 == true)
+                {
+                    System.out.print(" Room 3: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 3: CLOSED ");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open all the Air Conditioner type: open");
                 System.out.println("If you want to close all the Air Conditioner type: close");
@@ -419,7 +612,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the dining room: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the dining room: " + (Speakersdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the dining room: ");
+                if (Speakersdiningroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type: open");
                 System.out.println("If you want to close the Speakers type: close");
@@ -438,7 +639,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Kitchen: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the Kitchen: " + (Speakerskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the Kitchen: ");
+                if (Speakerskitchen == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type: open");
                 System.out.println("If you want to close the Speakers type: close");
@@ -457,7 +666,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Bathroom: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the Bathroom: " + (Speakersbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the Bathroom: ");
+                if (Speakersbathroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type: open");
                 System.out.println("If you want to close the Speakers type: close");
@@ -476,7 +693,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 1: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the Room 1: " + (Speakersroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the Room 1: ");
+                if (Speakersroom1 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type: open");
                 System.out.println("If you want to close the Speakers type: close");
@@ -495,7 +720,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 2: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the Room 2: " + (Speakersroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the Room 2: ");
+                if (Speakersroom2 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type: open");
                 System.out.println("If you want to close the Speakers type: close");
@@ -514,7 +747,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 3: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Speakers in the Room 3: " + (Speakersroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Speakers in the Room 3: ");
+                if (Speakersroom3 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Speakers type open");
                 System.out.println("If you want to close the Speakers type close");
@@ -533,7 +774,55 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control all the rooms simultaneously: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of all the Speakers in the house: " + (Speakersdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Speakerskitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Speakersbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Speakersroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Speakersroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Speakersroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("This is the state of all the Speakers in the house: ");
+                if (Speakersdiningroom == true)
+                {
+                    System.out.print(" Dining room: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Dining room: CLOSED ");
+                }
+                if (Speakerskitchen == true)
+                {
+                    System.out.print(" Kitchen: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Kitchen: CLOSED ");
+                }
+                if (Speakersbathroom == true)
+                {
+                    System.out.print(" Bathroom: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Bathroom: CLOSED ");
+                }
+                if (Speakersroom1 == true)
+                {
+                    System.out.print(" Room 1: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 1: CLOSED ");
+                }
+                if (Speakersroom2 == true)
+                {
+                    System.out.print(" Room 2: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 2: CLOSED ");
+                }
+                if (Speakersroom3 == true)
+                {
+                    System.out.print(" Room 3: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 3: CLOSED ");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open all the Speakers type: open");
                 System.out.println("If you want to close all the Speakers type: close");
@@ -590,7 +879,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the dining room: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the dining room: " + (Curtainsdiningroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the dining room: ");
+                if (Curtainsdiningroom == true)
+                {
+                    System.out.print(" Room 3: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 3: CLOSED ");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type: open");
                 System.out.println("If you want to close the Curtains type: close");
@@ -609,7 +906,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Kitchen: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the Kitchen: " + (Curtainskitchen ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the Kitchen: ");
+                if (Curtainskitchen == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type: open");
                 System.out.println("If you want to close the Curtains type: close");
@@ -628,7 +933,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Bathroom: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the Bathroom: " + (Curtainsbathroom ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the Bathroom: ");
+                if (Curtainsbathroom == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type: open");
                 System.out.println("If you want to close the Curtains type: close");
@@ -647,7 +960,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 1: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the Room 1: " + (Curtainsroom1 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the Room 1: ");
+                if (Curtainsroom1 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type: open");
                 System.out.println("If you want to close the Curtains type: close");
@@ -666,7 +987,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 2: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the Room 2: " + (Curtainsroom2 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the Room 2: ");
+                if (Curtainsroom2 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type: open");
                 System.out.println("If you want to close the Curtains type: close");
@@ -685,7 +1014,15 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control the Room 3: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of your Curtains in the Room 3: " + (Curtainsroom3 ? "OPEN" : "CLOSED"));
+                System.out.println("This is the state of your Curtains in the Room 3: ");
+                if (Curtainsroom3 == true)
+                {
+                    System.out.println("OPEN");
+                } 
+                else 
+                {
+                    System.out.println("CLOSED");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open the Curtains type open");
                 System.out.println("If you want to close the Curtains type close");
@@ -704,7 +1041,55 @@ public class Domotica {
                 System.out.println("--------------------------------------------------------");
                 System.out.println("You have chosen to control all the rooms simultaneously: ");
                 System.out.println("--------------------------------------------------------");
-                System.out.println("This is the state of all the Curtains in the house: " + (Curtainsdiningroom ? " Dining room: OPEN " : " Dining room: CLOSED ") + (Curtainskitchen ? " Kitchen: OPEN " : " Kitchen: CLOSED ") + (Curtainsbathroom ? " Bathroom: OPEN " : " Bathroom: CLOSED ") + (Curtainsroom1 ? " Room 1: OPEN " : " Room 1: CLOSED ") + (Curtainsroom2 ? " Room 2: OPEN " : " Room 2: CLOSED ") + (Curtainsroom3 ? " Room 3: OPEN " : " Room 3: CLOSED "));
+                System.out.println("This is the state of all the Curtains in the house: ");
+                if (Curtainsdiningroom == true)
+                {
+                    System.out.print(" Dining room: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Dining room: CLOSED ");
+                }
+                if (Curtainskitchen == true)
+                {
+                    System.out.print(" Kitchen: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Kitchen: CLOSED ");
+                }
+                if (Curtainsbathroom == true)
+                {
+                    System.out.print(" Bathroom: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Bathroom: CLOSED ");
+                }
+                if (Curtainsroom1 == true)
+                {
+                    System.out.print(" Room 1: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 1: CLOSED ");
+                }
+                if (Curtainsroom2 == true)
+                {
+                    System.out.print(" Room 2: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 2: CLOSED ");
+                }
+                if (Curtainsroom3 == true)
+                {
+                    System.out.print(" Room 3: OPEN ");
+                } 
+                else 
+                {
+                    System.out.print(" Room 3: CLOSED ");
+                }
                 System.out.println("--------------------------------------------------------");
                 System.out.println("If you want to open all the Curtains type: open");
                 System.out.println("If you want to close all the Curtains type: close");
@@ -742,7 +1127,143 @@ public class Domotica {
         } while (!opcio5.equalsIgnoreCase("8"));
     }
     public  void AutomaticMode(){
-    
+        boolean blindsDining = false, blindsKitchen = false, blindsBathroom = false, blindsRoom1 = false, blindsRoom2 = false, blindsRoom3 = false;
+        boolean curtainsDining = false, curtainsKitchen = false, curtainsBathroom = false, curtainsRoom1 = false, curtainsRoom2 = false, curtainsRoom3 = false;
+        int tempDining = 25, tempKitchen = 27, tempBathroom = 26, tempRoom1 = 24, tempRoom2 = 23, tempRoom3 = 28;
+        int targetTemp = 24; 
+
+        System.out.println("-------------------------------------");
+        System.out.println("You have chosen the Automatic Mode");
+        System.out.println("-------------------------------------");
+
+            for (int hour = 0; hour < 24; hour++) {
+                for (int minute = 0; minute < 60; minute++) {
+                    for (int second = 0; second < 60; second++) {
+            
+                    System.out.println(hour + ":" + minute + ":" + second);
+
+                    if (hour >= 8 && hour < 20)
+                    {
+                        blindsDining = blindsKitchen = blindsBathroom = blindsRoom1 = blindsRoom2 = blindsRoom3 = true;
+                        curtainsDining = curtainsKitchen = curtainsBathroom = curtainsRoom1 = curtainsRoom2 = curtainsRoom3 = true;
+                    }
+                    else
+                    {
+                        blindsDining = blindsKitchen = blindsBathroom = blindsRoom1 = blindsRoom2 = blindsRoom3 = false;
+                        curtainsDining = curtainsKitchen = curtainsBathroom = curtainsRoom1 = curtainsRoom2 = curtainsRoom3 = false;
+                    }
+                    System.out.println("Blinds status: ");
+                    if (blindsDining == true)
+                    {
+                        System.out.println("Dining room: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Dining room: CLOSED");
+                    }
+                    if (blindsKitchen == true)
+                    {
+                        System.out.println("Kitchen: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Kitchen: CLOSED");
+                    }
+                    if (blindsBathroom == true)
+                    {
+                        System.out.println("Bathroom: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Bathroom: CLOSED");
+                    }
+                    if (blindsRoom1 == true)
+                    {
+                        System.out.println("Room 1: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 1: CLOSED");
+                    }
+                    if (blindsRoom2 == true)
+                    {
+                        System.out.println("Room 2: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 2: CLOSED");
+                    }
+                    if (blindsRoom3 == true)
+                    {
+                        System.out.println("Room 3: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 3: CLOSED");
+                    }
+                    System.out.println("-------------------------------------");
+                    System.out.println("Curtains status: ");
+                    if (curtainsDining == true)
+                    {
+                        System.out.println("Dining room: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Dining room: CLOSED");
+                    }
+                    if (curtainsKitchen == true)
+                    {
+                        System.out.println("Kitchen: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Kitchen: CLOSED");
+                    }
+                    if (curtainsBathroom == true)
+                    {
+                        System.out.println("Bathroom: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Bathroom: CLOSED");
+                    }
+                    if (curtainsRoom1 == true)
+                    {
+                        System.out.println("Room 1: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 1: CLOSED");
+                    }
+                    if (curtainsRoom2 == true)
+                    {
+                        System.out.println("Room 2: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 2: CLOSED");
+                    }
+                    if (curtainsRoom3 == true)
+                    {
+                        System.out.println("Room 3: OPEN");
+                    }
+                    else
+                    {
+                        System.out.println("Room 3: CLOSED");
+                    }
+                    System.out.println("-------------------------------------");
+                    if (tempDining > targetTemp)
+                    {
+                        
+                    }
+                    else if (tempDining < targetTemp)
+                    {
+                    
+                    }
+                }
+            }
+        } 
+
     }
     public  void ChoseRoom(){
         System.out.println("-------------------------------------");
