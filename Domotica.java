@@ -7,7 +7,7 @@ public class Domotica {
      Scanner scanner = new Scanner(System.in);
      boolean blindsdiningroom = false , blindskitchen = false, blindsbathroom = false, blindsroom1 = false, blindsroom2 = false, blindsroom3 = false;
      String opcio2;
-        public void main(String[] args) {
+        public static void main(String[] args) {
             Domotica p = new Domotica();
             p.principal();
         }
@@ -1137,10 +1137,8 @@ public class Domotica {
         System.out.println("-------------------------------------");
 
             for (int hour = 0; hour < 24; hour++) {
-                for (int minute = 0; minute < 60; minute++) {
-                    for (int second = 0; second < 60; second++) {
             
-                    System.out.println(hour + ":" + minute + ":" + second);
+                    System.out.println(hour + ":00 Hours");
 
                     if (hour >= 8 && hour < 20)
                     {
@@ -1254,16 +1252,64 @@ public class Domotica {
                     System.out.println("-------------------------------------");
                     if (tempDining > targetTemp)
                     {
-                        
+                        System.out.println("Dining room: ON (" + tempDining + "°C)");
+                        tempDining = targetTemp;
                     }
                     else if (tempDining < targetTemp)
                     {
-                    
+                        System.out.println("Dining room: OFF (" + tempDining + "°C)");
                     }
-                }
+                    if (tempKitchen > targetTemp)
+                    {
+                        System.out.println("Kitchen: ON (" + tempKitchen + "°C)");
+                        tempKitchen = targetTemp;
+                    }
+                    else if (tempKitchen < targetTemp)
+                    {
+                        System.out.println("Kitchen: OFF (" + tempKitchen + "°C)");
+                    }
+                    if (tempBathroom > targetTemp)
+                    {
+                        System.out.println("Bathroom: ON (" + tempBathroom + "°C)");
+                        tempBathroom = targetTemp;
+                    }
+                    else if (tempBathroom < targetTemp)
+                    {
+                        System.out.println("Bathroom: OFF (" + tempBathroom + "°C)");
+                    }
+                    if (tempRoom1 > targetTemp)
+                    {
+                        System.out.println("Room 1: ON (" + tempRoom1 + "°C)");
+                        tempRoom1 = targetTemp;
+                    }
+                    else if (tempRoom1 < targetTemp)
+                    {
+                        System.out.println("Room 1: OFF (" + tempRoom1 + "°C)");
+                    }
+                    if (tempRoom2 > targetTemp)
+                    {
+                        System.out.println("Room 2: ON (" + tempRoom2 + "°C)");
+                        tempRoom2 = targetTemp;
+                    }
+                    else if (tempRoom2 < targetTemp)
+                    {
+                        System.out.println("Room 2: OFF (" + tempRoom2 + "°C)");
+                    }
+                    if (tempRoom3 > targetTemp)
+                    {
+                        System.out.println("Room 3: ON (" + tempRoom3 + "°C)");
+                        tempRoom3 = targetTemp;
+                    }
+                    else if (tempRoom3 < targetTemp)
+                    {
+                        System.out.println("Room 3: OFF (" + tempRoom3 + "°C)");
+                    }
+                    System.out.println("--------------------------------------------------------");
+                    try {
+                    Thread.sleep(50);
+                    } catch (InterruptedException e) {}
             }
-        } 
-
+        System.out.println("========Automatic Mode Finished.========");
     }
     public  void ChoseRoom(){
         System.out.println("-------------------------------------");
